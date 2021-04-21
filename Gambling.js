@@ -1,17 +1,19 @@
 console.log("welcome to the game");
 
-const stake = 100;
-const bet = 1;
+var stake = 100;
+var bet = 1;
 
 const win = 1;
 const loss = 0;
 
-function winnerDecider() {
-    let decider = Math.floor(Math.random() * 2);
-    if (decider == 0){
-        console.log("Lost");
+
+while(stake > 50 && stake < 150){
+    var random = Math.floor(Math.random() * 2);
+    if (random == win){
+        stake++;
     }else {
-        console.log("won")
+        stake--;
     }
+    console.log(stake);
 }
- winnerDecider();
+ 
